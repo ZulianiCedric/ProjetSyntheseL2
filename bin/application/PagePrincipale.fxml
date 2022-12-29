@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="31.200018310546874" minHeight="4.800024414062499" prefHeight="31.200018310546874" />
+      <RowConstraints maxHeight="275.99997558593753" minHeight="249.59998168945313" prefHeight="249.59998168945313" />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane fx:id="Dessin" minHeight="245.0" minWidth="250.0" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" />
+         </GridPane.margin>
+      </Pane>
+      <VBox alignment="CENTER" maxWidth="150.0" minHeight="118.0" minWidth="150.0" GridPane.columnIndex="1" GridPane.rowSpan="2" GridPane.vgrow="NEVER">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ChoixFichier" text="Choix de l'instance" VBox.vgrow="NEVER">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin></Button>
+            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#CreerNbPoint" text="Créer un point">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin></Button>
+            <Label text="Choix du Convex">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Label>
+            <ChoiceBox fx:id="ChoixConvexe" onAction="#AffichageChoixTri" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin></ChoiceBox>
+            <Label text="Choix de l'Algo de tri">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Label>
+            <ChoiceBox fx:id="ChoixTri" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin></ChoiceBox>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#Run" text="RUN">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#arret" text="EXIT">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </VBox>
+      <Label fx:id="choix" GridPane.halignment="CENTER" />
+   </children>
+</GridPane>
